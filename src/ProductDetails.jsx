@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import { Product } from "./ProductData";
 
 function ProductDetails() {
   const {id} = useParams();
   
-  const product = Product.find(p => p.id === id);
+  const cartData = localStorage.getItem("products");
+  const products = cartData ? JSON.parse(cartData) : [];
+  const product = products.find(p => p.id === id);
 
   const handleAddCart = () =>{
     const cartData = localStorage.getItem("cart");
