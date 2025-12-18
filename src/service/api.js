@@ -11,14 +11,14 @@ const api = axios.create({
 
 export const productAPI = {
   getAllProducts: async () => {
-    const res = await api.get('/getproduct');
+    const res = await api.get('/api/getproduct');
     return res.data;
   },
 };
 
 export const userAPI = {
   getAllUsers: async () => {
-    const res = await api.get('/getUser');
+    const res = await api.get('/api/getUser');
     return res.data;
   },
 };
