@@ -14,6 +14,12 @@ export const productAPI = {
     const res = await api.get('/api/getproduct');
     return res.data;
   },
+
+  // ✅ ADD THIS
+  createProduct: async (productData) => {
+    const res = await api.post('/api/postProduct', productData);
+    return res.data;
+  },
 };
 
 export const userAPI = {
