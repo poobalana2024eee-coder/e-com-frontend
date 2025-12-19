@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Login.jsx";
 import Home from "./Home.jsx";
 import Product from "./ProductCard.jsx";
+import UserProductCard from "./UserProductCard.jsx";
 import Cart from "./Cart.jsx";
 import NavBar from "./NavBar.jsx";
 import ProductDetails from "./ProductDetails.jsx";
@@ -33,7 +34,7 @@ function App() {
         {user === 'admin' ? (
           <Route path="/products" element={<AdminPanel />} />
         ) : (
-          <Route path="/products" element={<Product />} />
+          <Route path="/products" element={<UserProductCard />} />
         )}
         {user === 'user' && <Route path="/cart" element={<Cart />} />}
         <Route path="/product/:id" element={<ProductDetails />} />
