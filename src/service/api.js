@@ -27,6 +27,18 @@ export const productAPI = {
     const response = await api.post("/postProduct", productData);
     return response.data;
   },
+
+  // Update a product
+  updateProduct: async (id, productData) => {
+    const response = await api.put(`/updateProduct/${id}`, productData);
+    return response.data;
+  },
+
+  // Delete a product
+  deleteProduct: async (id) => {
+    const response = await api.delete(`/deleteProduct/${id}`);
+    return response.data;
+  },
 };
 
 /* =========================
