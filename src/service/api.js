@@ -18,25 +18,25 @@ const api = axios.create({
 export const productAPI = {
   // Get all products
   getAllProducts: async () => {
-    const response = await api.get("/getproduct");
+    const response = await api.get("/api/getproduct");
     return response.data;
   },
 
   // Create a new product
   createProduct: async (productData) => {
-    const response = await api.post("/postProduct", productData);
+    const response = await api.post("/api/postProduct", productData);
     return response.data;
   },
 
   // Update a product
   updateProduct: async (id, productData) => {
-    const response = await api.put(`/updateProduct/${id}`, productData);
+    const response = await api.put(`/api/updateProduct/${id}`, productData);
     return response.data;
   },
 
   // Delete a product
   deleteProduct: async (id) => {
-    const response = await api.delete(`/deleteProduct/${id}`);
+    const response = await api.delete(`/api/deleteProduct/${id}`);
     return response.data;
   },
 };
@@ -47,25 +47,25 @@ export const productAPI = {
 export const userAPI = {
   // Get all users
   getAllUsers: async () => {
-    const response = await api.get("/getUser");
+    const response = await api.get("/api/getUser");
     return response.data;
   },
 
   // Create a new user
   createUser: async (userData) => {
-    const response = await api.post("/postUser", userData);
+    const response = await api.post("/api/postUser", userData);
     return response.data;
   },
 
   // Delete a user
   deleteUser: async (id) => {
-    const response = await api.delete(`/deleteUser/${id}`);
+    const response = await api.delete(`/api/deleteUser/${id}`);
     return response.data;
   },
 
   // Update a user
   updateUser: async (id, userData) => {
-    const response = await api.put(`/updateUser/${id}`, userData);
+    const response = await api.put(`/api/updateUser/${id}`, userData);
     return response.data;
   },
 };
